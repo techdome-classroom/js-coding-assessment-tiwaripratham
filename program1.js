@@ -5,9 +5,7 @@ const getTotalIsles = function (grid) {
   const cols = grid[0].length;
   let islandCount = 0;
 
-  // Helper function for DFS traversal
   function dfs(row, col) {
-    // Check boundaries and water cells
     if (
       row < 0 ||
       col < 0 ||
