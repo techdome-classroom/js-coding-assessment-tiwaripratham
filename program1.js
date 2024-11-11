@@ -20,17 +20,14 @@ const getTotalIsles = function (grid) {
     // Mark cell as visited by changing it to 'W'
     grid[row][col] = "W";
 
-    // Traverse all four directions
-    dfs(row + 1, col); // down
-    dfs(row - 1, col); // up
-    dfs(row, col + 1); // right
+    dfs(row + 1, col); 
+    dfs(row - 1, col); 
+    dfs(row, col + 1); 
     dfs(row, col - 1); // left
   }
 
-  // Loop through each cell in the grid
   for (let i = 0; i < rows; i++) {
     for (let j = 0; j < cols; j++) {
-      // If we find an unvisited 'L', it starts a new island
       if (grid[i][j] === "L") {
         islandCount++;
         dfs(i, j); 
