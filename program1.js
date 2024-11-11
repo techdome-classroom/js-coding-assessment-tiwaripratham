@@ -33,7 +33,7 @@ const getTotalIsles = function (grid) {
       // If we find an unvisited 'L', it starts a new island
       if (grid[i][j] === "L") {
         islandCount++;
-        dfs(i, j); // Mark all parts of the island
+        dfs(i, j); 
       }
     }
   }
