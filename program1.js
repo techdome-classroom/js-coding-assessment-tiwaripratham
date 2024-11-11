@@ -17,21 +17,22 @@ const getTotalIsles = function (grid) {
 
     grid[row][col] = "W";
 
-    dfs(row + 1, col); 
-    dfs(row - 1, col); 
-    dfs(row, col + 1); 
-    dfs(row, col - 1); 
+    dfs(row + 1, col);
+    dfs(row - 1, col);
+    dfs(row, col + 1);
+    dfs(row, col - 1);
   }
 
   for (let i = 0; i < rows; i++) {
     for (let j = 0; j < cols; j++) {
       if (grid[i][j] === "L") {
         islandCount++;
-        dfs(i, j); 
+        dfs(i, j);
+      }
     }
-  }
 
-  return islandCount;
-};
+    return islandCount;
+  };
+}
 
 module.exports = getTotalIsles;
