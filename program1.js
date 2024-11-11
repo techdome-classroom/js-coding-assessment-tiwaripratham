@@ -17,13 +17,12 @@ const getTotalIsles = function (grid) {
     )
       return;
 
-    // Mark cell as visited by changing it to 'W'
     grid[row][col] = "W";
 
     dfs(row + 1, col); 
     dfs(row - 1, col); 
     dfs(row, col + 1); 
-    dfs(row, col - 1); // left
+    dfs(row, col - 1); 
   }
 
   for (let i = 0; i < rows; i++) {
