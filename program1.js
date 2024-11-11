@@ -20,7 +20,6 @@ const getTotalIsles = function (grid) {
     // Mark current cell as visited by changing it to water
     grid[row][col] = "W";
 
-    // Traverse neighboring cells
     dfs(row + 1, col); // down
     dfs(row - 1, col); // up
     dfs(row, col + 1); // right
