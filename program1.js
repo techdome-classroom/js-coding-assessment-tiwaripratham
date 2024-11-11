@@ -5,9 +5,7 @@ const getTotalIsles = function (grid) {
   const cols = grid[0].length;
   let islandCount = 0;
 
-  // Helper function for DFS traversal
   function dfs(row, col) {
-    // Base case: if out of bounds or in water, stop
     if (
       row < 0 ||
       col < 0 ||
@@ -17,7 +15,6 @@ const getTotalIsles = function (grid) {
     )
       return;
 
-    // Mark current cell as visited by changing it to water
     grid[row][col] = "W";
 
     dfs(row + 1, col); 
